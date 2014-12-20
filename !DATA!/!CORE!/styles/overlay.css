@@ -1,0 +1,79 @@
+#overlay {
+  color: white;
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 1s, opacity 1s;
+}
+#content[data-visible] ~ #overlay {
+  visibility: hidden;
+  opacity: 0;
+}
+#overlay-toggle[data-on] ~ #overlay {
+  visibility: visible;
+  opacity: 1;
+}
+
+#overlay-toggle {
+  position: fixed;
+  bottom: 1rem;
+  left: 2rem;
+  font-size: .75em;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility .5s, opacity .5s;
+  color: white;
+  cursor: pointer;
+}
+#content[data-visible] ~ #overlay-toggle {
+  visibility: visible;
+  opacity: .5;
+}
+#content[data-visible] ~ #overlay-toggle:hover {
+  visibility: visible;
+  opacity: 1;
+}
+#content[data-visible] ~ #overlay-toggle[data-on] {
+  visibility: hidden;
+  opacity: 0;
+}
+
+#overlay > header {
+  position: fixed;
+  bottom: 2em;
+  left: 2em;
+  font-size: 1em;
+}
+#overlay > header h1 {
+  font-size: 5em;
+  margin: 0;
+  font-style: italic;
+  text-decoration: none;
+}
+#overlay > header p {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+#overlay > nav {
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+  text-align: right;
+  width: auto;
+  margin: 0;
+  -webkit-column-width: auto;
+  -moz-column-width: auto;
+  column-width: auto;
+}
+#overlay > nav a {
+  display: inline-block;
+  margin: 0 1em;
+  width: auto;
+  padding: 0;
+}
+#overlay > nav a:first-child {
+  font-size: 1.5rem;
+}
+#overlay > nav a:last-child {
+  margin-right: 0;
+}

@@ -1,0 +1,20 @@
+.parallax {
+  top: -.5%;
+  left: -.5%;
+  width: 101%;
+  height: 101%;
+}
+.parallax:not(.container) {
+  text-shadow: currentColor 0 0 .0625em;
+}
+
+.parallax.container > div.image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-size: auto 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
